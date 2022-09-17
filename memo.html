@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <input type="text" class="new-memo">
+    <button type="button" class="add-memo">メモ追加</button>
+    <ul class="memo-list">
+        <li>メモです</li>
+    </ul>
+    <script>
+        const addButton = document.querySelector('button');
+        addButton.addEventListener('click', function () {
+            const newMemo = document.querySelector('.new-memo');
+            const addMemo = newMemo.value;
+            const newElement = document.createElement('li');
+            newElement.textContent = addMemo;
+            const memoList = document.querySelector('.memo-list');
+            memoList.append(newElement);
+            newMemo.value = '';
+        });
+    </script>
+</body>
+
+</html>

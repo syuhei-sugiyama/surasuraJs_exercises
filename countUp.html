@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <p class="countNum">0</p>
+    <button class="button">カウントアップ(+1)</button>
+    <script>
+        const button = document.querySelector('.button');
+        button.addEventListener('click', function () {
+            const countNum = document.querySelector('.countNum');
+            const currentNum = parseInt(countNum.textContent);
+            if (currentNum === 10) {
+                alert('カウントが10に達しました。0に戻します');
+                countNum.textContent = 0;
+            } else {
+                countNum.textContent = currentNum + 1;
+            }
+        });
+    </script>
+</body>
+
+</html>
